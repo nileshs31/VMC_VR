@@ -69,7 +69,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                         },
                     });
 
-#if UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS
+/*#if UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS
                 s_BuildValidationRules.Add(
                     new BuildValidationRule
                     {
@@ -86,7 +86,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                         FixItAutomatic = true,
                         Error = InputSystem.actions != null && (InputSystem.actions.name == k_InputActionAssetName || AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(InputSystem.actions)) == k_InputActionAssetGuid),
                     });
-#endif
+#endif*/
             }
 
             foreach (var buildTargetGroup in s_BuildTargetGroups)
