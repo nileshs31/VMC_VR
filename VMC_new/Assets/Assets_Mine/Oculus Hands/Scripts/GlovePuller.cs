@@ -72,11 +72,11 @@ public class GlovePuller : MonoBehaviour
         float transitionValue;
         if (smoothT <= 0.95f)
         {
-            transitionValue = Mathf.Lerp(0f, 3f, smoothT / 0.95f);
+            transitionValue = Mathf.Lerp(0f, 4f, smoothT / 0.95f);
         }
         else
         {
-            transitionValue = Mathf.Lerp(3f, 20f, (smoothT - 0.95f) / 0.05f);
+            transitionValue = Mathf.Lerp(4f, 30f, (smoothT - 0.95f) / 0.05f);
         }
 
 
