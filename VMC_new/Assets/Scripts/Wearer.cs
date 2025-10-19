@@ -8,6 +8,8 @@ public class Wearer : MonoBehaviour
     public Material gloveMat;
     public SkinnedMeshRenderer hand;
     public MeshRenderer helmetOnHead;
+    public GlovesFinisher GlovesFinisher;
+    public GameObject glassesUI,helmetUI, vmcUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Wearer : MonoBehaviour
             Debug.Log("here");
             hand.material = gloveMat;
             this.gameObject.SetActive(false);
+            GlovesFinisher.GlovesWearing();
         }
 
         else if (isGloves && other.CompareTag("Right Hand"))
@@ -34,15 +37,20 @@ public class Wearer : MonoBehaviour
             Debug.Log("here2");
             hand.material = gloveMat;
             this.gameObject.SetActive(false);
+            GlovesFinisher.GlovesWearing();
         }
         else if(isHelmet && other.CompareTag("HelmetPosition"))
         {
             Debug.Log("here3");
             helmetOnHead.enabled = true;
+            vmcUI.SetActive(true);
+            helmetUI.SetActive(false);
             this.gameObject.SetActive(false);
         }
         else if(isGlasses && other.CompareTag("GlassesPosition"))
         {
+            glassesUI.SetActive(false);
+            helmetUI.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }
