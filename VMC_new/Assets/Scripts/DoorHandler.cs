@@ -17,6 +17,8 @@ public class DoorHandler : MonoBehaviour
 
     private Rigidbody rb;
 
+    public DoorHandlerUI doorHandlerUI;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,10 +40,14 @@ public class DoorHandler : MonoBehaviour
             if (distanceToOpen <= snapThreshold)
             {
                 SnapDoor(openPosition);
+                doorHandlerUI.opened++;
+                doorHandlerUI.closed--;
             }
             else if (distanceToClosed <= snapThreshold)
             {
                 SnapDoor(closedPosition);
+                doorHandlerUI.opened--;
+                doorHandlerUI.closed++;
             }
         }
     }
