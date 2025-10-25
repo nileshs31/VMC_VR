@@ -21,7 +21,7 @@ public class ButtonPushAnimationVMC : MonoBehaviour
         selectmachineprogramUI.SetActive(false);
         observeUI.SetActive(true);
         VmcAnim.SetBool("startAnim", true);
-        Invoke("CubeSpawner", 13.38f);
+        Invoke("CubeSpawner", 13.65f);
     }
     public void CubeSpawner()
     {
