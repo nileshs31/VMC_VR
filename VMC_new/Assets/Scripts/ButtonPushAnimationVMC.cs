@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
  
 
 public class ButtonPushAnimationVMC : MonoBehaviour
@@ -13,7 +13,7 @@ public class ButtonPushAnimationVMC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => AnimationStarter());
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>().selectEntered.AddListener(x => AnimationStarter());
     }
 
     public void AnimationStarter()

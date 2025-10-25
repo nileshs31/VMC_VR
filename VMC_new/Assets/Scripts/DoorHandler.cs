@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class DoorHandler : MonoBehaviour
 {
     [Header("Door Handle & Grab")]
-    public XRGrabInteractable doorGrabInteractable;
+    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable doorGrabInteractable;
 
     [Header("Snap Positions")]
     public Transform openPosition;

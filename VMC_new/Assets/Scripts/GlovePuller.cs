@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class GlovePuller : MonoBehaviour
 {
-    public XRDirectInteractor handInteractor;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor handInteractor;
     public bool isLeft = true;
     public bool canPull = false;
     public InputDevice device;
@@ -102,7 +102,7 @@ public class GlovePuller : MonoBehaviour
             if (tableGlove != null)
             {
                 tableGlove.SetActive(true);
-                XRGrabInteractable grab = tableGlove.GetComponent<XRGrabInteractable>();
+                UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab = tableGlove.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
                 if (grab != null && handInteractor != null)
                 {
                     XRInteractionManager im = handInteractor.interactionManager;

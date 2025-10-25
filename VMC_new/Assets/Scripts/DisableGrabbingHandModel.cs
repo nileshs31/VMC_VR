@@ -14,9 +14,9 @@ public class DisableGrabbingHandModel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GetComponent<XRGrabInteractable>() != null)
+        if(GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>() != null)
         {
-            XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+            UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
             grabInteractable.selectEntered.AddListener(HideGrabbingHand);
             grabInteractable.selectExited.AddListener(ShowGrabbingHand);
         }

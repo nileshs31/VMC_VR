@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class BoxAnimator : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class BoxAnimator : MonoBehaviour
     }
     public void CubeDeSpawner()
     {
-        cubeToOff.GetComponent<XRGrabInteractable>().enabled = false;
+        cubeToOff.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
         cubeToOff.transform.parent = this.transform;
     }
     // Update is called once per frame
