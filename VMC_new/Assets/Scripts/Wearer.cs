@@ -10,6 +10,7 @@ public class Wearer : MonoBehaviour
     public MeshRenderer helmetOnHead;
     public GlovesFinisher GlovesFinisher;
     public GameObject glassesUI,helmetUI, vmcUI;
+    public Collider helmetCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,8 @@ public class Wearer : MonoBehaviour
         else if(isGlasses && other.CompareTag("GlassesPosition"))
         {
             glassesUI.SetActive(false);
-            helmetUI.SetActive(true);
+            helmetUI.SetActive(true); 
+            helmetCollider.enabled = true;
             this.gameObject.SetActive(false);
         }
     }

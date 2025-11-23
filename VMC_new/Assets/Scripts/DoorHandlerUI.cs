@@ -13,6 +13,9 @@ public class DoorHandlerUI : MonoBehaviour
 
     public bool workpieceLoaded, isFinished;
     public GameObject openMachineDoorUI, pickWorkPieceUI, closeMachineDoorUI, selectProgramUI;
+
+    public Collider[] cubesOnTable;
+    public Collider startButton;
     void Update()
     {
         // Assume you have 2 doors total
@@ -39,12 +42,18 @@ public class DoorHandlerUI : MonoBehaviour
         if (!isFinished && workpieceLoaded)
         {
             closeMachineDoorUI.SetActive(false);
-            selectProgramUI.SetActive(true);
+            selectProgramUI.SetActive(true); 
+            startButton.enabled = true;
         }
         else if (!isFinished && !workpieceLoaded)
         {
             openMachineDoorUI.SetActive(false);
             pickWorkPieceUI.SetActive(true);
+
+            foreach (var col in cubesOnTable)
+            {
+                col.enabled = true;
+            }
         }
         
     }
@@ -58,7 +67,8 @@ public class DoorHandlerUI : MonoBehaviour
         if (!isFinished && workpieceLoaded)
         {
             closeMachineDoorUI.SetActive(false);
-            selectProgramUI.SetActive(true);
+            selectProgramUI.SetActive(true); 
+            startButton.enabled = true;
         }
 
         

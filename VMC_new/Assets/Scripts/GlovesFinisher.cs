@@ -6,6 +6,7 @@ public class GlovesFinisher : MonoBehaviour
 {
     int glovesWore = 0;
     public GameObject uigo, nextstepui;
+    public Collider[] nextColliders;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class GlovesFinisher : MonoBehaviour
         glovesWore++;
         if (glovesWore == 2)
         {
+            foreach (var col in nextColliders)
+            {
+                col.enabled = true;
+            }
             nextstepui.SetActive(true);
             uigo.SetActive(false);
 
